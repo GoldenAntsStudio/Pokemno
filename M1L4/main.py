@@ -24,6 +24,7 @@ def go(message):
             bot.reply_to(message, "Невозможно забанить администратора.")
         else:
             bot.ban_chat_member(chat_id, user_id)
+
 @bot.message_handler(content_types=['new_chat_members'])
 def make_some(message):
     bot.send_message(message.chat.id, 'I accepted a new user!')
